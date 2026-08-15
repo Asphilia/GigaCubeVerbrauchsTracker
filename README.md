@@ -7,18 +7,18 @@ Genau dafür ist diese App da.
 Version 0.0  
 
 ## Geplante Features
-[ ] Eingabe von Aktualisierungshäufigkeit
-[ ] Lokale Speicherung der Verbrauchsdaten
-[ ] Anzeige des aktuellen Verbrauchs
-[ ] Anzeige des aktuell noch verfügbaren Datenvolumens
-[ ] Grafische Ansicht vom Datenvolumenverbrauch
-[ ] Grafische Ansicht der Veränderung des Durchschnittsverbrauchs
-[ ] Einstellung für Berechnung des Durchschnittsverbrauchs
-[ ] Prognose auf Basis des Durchschnittsverbrauchs
-[ ] Analyse des Durchschnittsverbrauchs
-[ ] Prognose auf Basis der Analyse des Durchschnittsverbrauchs
-[ ] Weitere Datenspeicherungsmöglichkeiten und Einstellungen
-[ ] Installer bzw. fertige Builds zum Download bereitstellen
+- [ ] Eingabe von Aktualisierungshäufigkeit
+- [ ] Lokale Speicherung der Verbrauchsdaten
+- [ ] Anzeige des aktuellen Verbrauchs
+- [ ] Anzeige des aktuell noch verfügbaren Datenvolumens
+- [ ] Grafische Ansicht vom Datenvolumenverbrauch
+- [ ] Grafische Ansicht der Veränderung des Durchschnittsverbrauchs
+- [ ] Einstellung für Berechnung des Durchschnittsverbrauchs
+- [ ] Prognose auf Basis des Durchschnittsverbrauchs
+- [ ] Analyse des Durchschnittsverbrauchs
+- [ ] Prognose auf Basis der Analyse des Durchschnittsverbrauchs
+- [ ] Weitere Datenspeicherungsmöglichkeiten und Einstellungen
+- [ ] Installer bzw. fertige Builds zum Download bereitstellen
 
 ## Voraussetzung
 Damit diese App funktioniert, muss sie auf einem Gerät laufen, dass im Netzwerk des GigaCubes ist.  
