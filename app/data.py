@@ -67,6 +67,7 @@ class GCVT_Data:
         self.data['remaining'] = self.data['volumen'] - self.data['verbrauch']
         self.data['recommended_daily_usage'] = self.data['remaining'] / days_until_end
         self.generally_recommended_daily_usage = self.data['volumen'][0] / days_between
+        self.percentage_used = self.data['verbrauch'].iloc[-1] / self.data['volumen'].iloc[-1]
         
 # TEST
 if __name__ == "__main__":
