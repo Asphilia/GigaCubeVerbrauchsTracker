@@ -15,6 +15,8 @@ import requests
 import time
 # Einstellungen
 from settings import GCVT_Settings
+# Checken, ob Datei existiert
+from pathlib import Path
 
 # VARIABLEN
 # URL für die Verbrauchsabfrage
@@ -25,6 +27,17 @@ HEADERS = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:153.0) Geck
 class GCVT_Backend:
     def __init__(self):
         self.settings = GCVT_Settings()
+
+    def save_datapoint(self):
+        dp = self.extract()
+        ts = time.time()
+        filepath = self.settings.get_saving_directory() + "/gcvt-data-" + dp['zeitraum'] +".csv"
+        if Path(filepath).exists():
+            with open(filepath, 'a') as file:
+                file.write(f'\n{int(ts)},{dp['verbrauch']},{dp['volumen_gesamt']}')
+        else:
+            with open(filepath, 'x') as file:
+                file.write(f'timestamp,verbrauch,volumen\n{int(ts)},{dp['verbrauch']},{dp['volumen_gesamt']}')
 
     def extract(self):
         return self._extract_usage(
@@ -73,6 +86,8 @@ class GCVT_Backend:
         print('Extraction Test: ' + extraction_result)
         connection_result = 'SUCCESS' if 'Meine verbrauchten GB:' in self._get_html() else 'FAILED'
         print('Connection Test: ' + connection_result)
+        self.save_datapoint()
+        print('Saved current datapoint in Test CSV')
 
 if __name__ == "__main__":
     gcvt = GCVT_Backend()
