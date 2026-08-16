@@ -4,11 +4,12 @@ Ich habe mich immer gefragt, wie mein aktueller Verbrauch ist und ob ich diesen 
 Genau dafür ist diese App da.
 
 ## Aktuelle Version
-Version 0.0  
+Version 0.1  
+Es handelt sich hierbei um eine Testversion! Einzig der Backend-Test funktioniert und schreibt einmalig bei Ausführung den aktuellen Verbrauch in eine CSV.  
 
 ## Geplante Features
 - [ ] Eingabe von Aktualisierungshäufigkeit
-- [ ] Lokale Speicherung der Verbrauchsdaten
+- [x] Lokale Speicherung der Verbrauchsdaten
 - [ ] Anzeige des aktuellen Verbrauchs
 - [ ] Anzeige des aktuell noch verfügbaren Datenvolumens
 - [ ] Grafische Ansicht vom Datenvolumenverbrauch
@@ -18,7 +19,6 @@ Version 0.0
 - [ ] Analyse des Durchschnittsverbrauchs
 - [ ] Prognose auf Basis der Analyse des Durchschnittsverbrauchs
 - [ ] Weitere Datenspeicherungsmöglichkeiten und Einstellungen
-- [ ] Installer bzw. fertige Builds zum Download bereitstellen
 
 ## Voraussetzung
 Damit diese App funktioniert, muss sie auf einem Gerät laufen, dass im Netzwerk des GigaCubes ist.  
@@ -28,10 +28,29 @@ Damit diese App funktioniert, muss sie auf einem Gerät laufen, dass im Netzwerk
 Bisher nur als Python-Skript.
 
 ## Code-Qualität
-Dieses Projekt ist komplett ohne KI erstellt.
+Komplett selbst gecoded, ohne Vibe-Coding.
 
 ## Nutzung
-Nach erster Installation die Einstellungen setzen. Abrufen des Verbrauchs erfolgt nur bei geöffneter App.
+Clone dieses Repo
+```
+git clone https://github.com/Asphilia/GigaCubeVerbrauchsTracker.git
+cd GigaCubeVerbrauchsTracker
+```
+Empfohlen, aber optional: Erstelle eine Venv
+```
+python3 -m venv .venv
+source .venv/bin/activate
+```
+Installiere die Requirements
+```
+pip install -r requirements.txt
+```
+Ändere in `app/settings.yaml` den `saving_directory` Pfad. Mindestens die `~` muss aufgelöst sein.  
+Führe Backend aus. Dies führt die Tests aus und schreibt deinen aktuellen Verbrauch in eine CSV Datei im `saving_directory`.
+```
+cd app
+python backend.py
+```
 
 ## Autoren
 Asphilia  

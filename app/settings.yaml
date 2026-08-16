@@ -1,0 +1,12 @@
+backend:
+  data:
+    refresh_minutes: 60
+    saving_directory: "~/.gcvt/data"
+frontend:
+  theme: default
+  username: None
+  data:
+    mean_time: start
+    delta: 1d
+  analysis: false
+  prognosis: mean
